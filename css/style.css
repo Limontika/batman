@@ -2,7 +2,7 @@ body{
     background-color: #0A090A;
     color: white;
     font-family: 'Roboto', sans-serif;
-    background-image: url('/img/main-bg.png');
+    background-image: url('../img/main-bg.png');
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -134,7 +134,7 @@ body{
     content: '';
     width: 30px;
     height: 30px;
-    background-image: url('/img/play.svg');
+    background-image: url('../img/play.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     margin-right: 15px;
@@ -155,7 +155,7 @@ body{
     content: '';
     width: 30px;
     height: 30px;
-    background-image: url('/img/play.svg');
+    background-image: url('../img/play.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     margin-left: 15px;
@@ -168,12 +168,16 @@ body{
     background: #FFFFFF;
     border-radius: 3px;
     color: #000000;
-    padding: 43px 50px;
+    padding: 3% 5%;
+}
+
+.short-info{
+    margin-right: 3%;
 }
 
 .poster{
     display: block;
-    margin-top: -80px;
+    margin-top: -40%;
     margin-bottom: 20px;
 }
 
@@ -200,6 +204,7 @@ body{
     padding-left: 15px;
     /* Подчеркивание элементов */
     text-decoration: underline;
+    line-height: 150%;
 }
 
 .full-info{
@@ -215,14 +220,157 @@ body{
     margin-right: 70px;
 }
 
+.tabs{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4%;
+}
+
 .tabs-item{
     color: #000000;
     text-decoration: none;
-    margin-right: 40px;
     font-size: 18px;
     line-height: 21px;
 }
 
+/* Последнему элементу не задавать данный стиль */
+.tabs-item:not(:last-child){
+    margin-right: 4%;
+}
+
 .tabs-item-active{
     color: #FF8F27;
+}
+
+.text{
+    font-size: 16px;
+    line-height: 140%;
+    margin-top: 0;
+}
+
+.subscribe-title{
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.subscribe-form{
+    display: flex;
+    margin-bottom: 48px;
+}
+.subscribe-input{
+    background: rgba(241, 241, 241, 0.5);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.subscribe-button{
+    background: #FF8F27;
+    border-radius: 0px 5px 5px 0px;
+    border:none;
+    padding: 12px;
+}
+
+
+@media (max-width: 1200px){
+    .container{
+        max-width: 960px;
+    }
+    .tabs-item{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px){
+    .container{
+        max-width: 740px;
+    }
+    .tabs{
+        flex-wrap: wrap;
+    }
+    .tabs-item{
+        line-height: 2;
+        flex-basis: 20%;
+    }
+    .full-content{
+        flex-wrap: wrap;
+    }
+    .tabs-content{
+        margin-bottom: 5%;
+    }
+    .text{
+        font-size: 14px;
+    }
+    .actors-list{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        max-width: 540px;
+    }
+    .more{
+        display: none;
+    }
+    .tabs-item{
+        flex-basis: 33%;
+    }
+}
+
+@media (max-width: 578px){
+    .container{
+        width: 90%;
+    }
+    .more{
+        display: none;
+    }
+    .tabs-item{
+        flex-basis: 33%;
+    }
+    .header{
+        flex-wrap: wrap;
+    }
+    .search{
+        flex-basis: 100%;
+        order: 3;
+        margin-top: 5%;
+    }
+    .content{
+        flex-wrap: wrap;
+    }
+    .short-info{
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
+    .actors-list, .actors-title{
+        display: none;
+    }
+    .tabs-content{
+        margin-right: 0;
+    }
+    .move-info{
+        flex-wrap: wrap;
+    }
+    .play{
+        flex-basis: 100%;
+        margin-top: 5%;
+    }
+    .poster{
+        margin-top: -30%;
+        display: inline-block;
+        width: 100%;
+    }
+    .button{
+        width: 100%;
+    }
 }
